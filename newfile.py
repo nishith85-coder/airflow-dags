@@ -3,28 +3,28 @@ from pendulum import datetime
 from time import sleep
 
 @dag(start_date=datetime(2025, 1, 1), schedule=None, catchup=False)
-def celery():
+def celery_new():
     
     @task
-    def a():
+    def t():
         print("A")
         sleep(15)
     
     @task
-    def b():
+    def f():
         print("B")
         sleep(15)
     
     @task
-    def c():
+    def n():
         print("C")
         sleep(15)
 
     @task
-    def d():
+    def l():
         print("D")
         sleep(15)
         
-    a() >> [b(), c(), d()]
+    t() >> [f(), n(), l()]
     
 celery()
