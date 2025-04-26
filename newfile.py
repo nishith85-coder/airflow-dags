@@ -27,4 +27,4 @@ def celery_new():
         
     t() >> [f(), n(), l()]
     
-celery()
+celery_new()
